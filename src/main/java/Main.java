@@ -1,6 +1,3 @@
-import java.sql.*;
-import java.util.Scanner;
-
 public class Main {
 
     static String jdbcUrl = "jdbc:postgresql://localhost:5432/kemmyps";
@@ -8,11 +5,9 @@ public class Main {
     static String password = "";
 
     public static void main(String[] args) {
-//        insertContact();
-//        listContacts();
-
-        MainOptions mainOptions = new MainOptions();
-        mainOptions.mainOptions();
+        //exibi menu de opcoes
+        Agenda agenda = new Agenda();
+        agenda.open();
 
     }
 }
