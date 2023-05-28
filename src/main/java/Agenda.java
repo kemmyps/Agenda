@@ -49,7 +49,7 @@ public class Agenda {
                 serviceContacts.deleteContact();
                 break;
             case 6:
-                // falta implementar
+                serviceContacts.deleteAllContact();
                 break;
             default:
                 invalidOptions();

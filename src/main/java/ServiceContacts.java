@@ -77,6 +77,8 @@ public class ServiceContacts {
             // Execução da consulta SQL para inserir novo registro na tabela contatos
             String sql = "INSERT INTO contatos (nome, numero, endereco, favorito) VALUES ('" + nome + "', '" + numero + "', '" + endereco + "', " + favorito + ")";
 
+            System.out.println("Contato adicionado com sucesso!");
+
             Statement statement = connection.createStatement();
             statement.execute(sql);
 
@@ -103,6 +105,8 @@ public class ServiceContacts {
 
             Statement statement = connection.createStatement();
             statement.executeUpdate(sql);
+
+            System.out.println("Contato deletado com sucesso!");
 
             statement.close();
             connection.close();
@@ -145,12 +149,44 @@ public class ServiceContacts {
             Statement statement = connection.createStatement();
             statement.executeUpdate(sql);
 
+            System.out.println("Contato editado com sucesso!");
+
             statement.close();
             connection.close();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
+
+    void deleteAllContact() {
+        try {
+            Connection connection = getConnection();
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.println("Tem certeza que deseja excluir todos os contatos (s/n)? ");
+            String resposta = scanner.nextLine();
+
+            Statement statement = connection.createStatement();
+            if (resposta.equalsIgnoreCase("s")) {
+
+                // Execução da consulta SQL para excluir todos os registros na tabela contatos
+
+                String sql = "DELETE FROM contatos";
+                statement.executeUpdate(sql);
+
+                System.out.println("Todos os contatos foram excluídos com sucesso.");
+            } else {
+                System.out.println("Operação cancelada pelo usuário.");
+            }
+
+            statement.close();
+            connection.close();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
     private Connection getConnection() throws SQLException {
         String jdbcUrl = "jdbc:postgresql://localhost:5432/kemmyps";
