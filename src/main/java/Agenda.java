@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class Agenda {
 
+    ServiceContacts serviceContacts = new ServiceContacts();
+
     public void open() {
        showMenu();
        selectOption();
@@ -13,7 +15,7 @@ public class Agenda {
                 "1. Visualizar agenda",
                 "2. Visualizar favoritos",
                 "3. Criar novo contato",
-                "4. Editor contato",
+                "4. Editar contato",
                 "5. Excluir contato",
                 "6. Excluir agenda",
                 "0. Sair da Agenda"
@@ -32,19 +34,19 @@ public class Agenda {
                 System.out.println("Até mais!");
                 return;
             case 1:
-                ServiceContacts.listContacts();
+                serviceContacts.listContacts(false);
                 break;
             case 2:
-                // falta implementar
+                serviceContacts.listContacts(true);
                 break;
             case 3:
-                ServiceContacts.insertContact();
+                serviceContacts.insertContact();
                 break;
             case 4:
-                // falta implementar
+                serviceContacts.editContact();
                 break;
             case 5:
-                // falta implementar
+                serviceContacts.deleteContact();
                 break;
             case 6:
                 // falta implementar
