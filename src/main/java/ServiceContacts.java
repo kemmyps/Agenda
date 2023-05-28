@@ -21,11 +21,12 @@ public class ServiceContacts {
 
             ResultSet resultSet = statement.executeQuery(sql);
 
-            // Processamento dos resultados
+            // Processamento dos resultados e contagem de registros
+
             System.out.println("|----------------------------------------------------------------------|");
             System.out.printf("| %-3s | %-10s | %-15s | %-20s | %-8s |\n", "ID", "Nome", "Numero", "Endereco", "Favorito");
             System.out.println("|----------------------------------------------------------------------|");
-
+            int cont = 0;
             while (resultSet.next()) {
                 // Recupere os valores das colunas do resultado
                 int id = resultSet.getInt("id");
@@ -35,8 +36,12 @@ public class ServiceContacts {
                 Boolean favorito = resultSet.getBoolean("favorito");
 
                 System.out.printf("| %-3s | %-10s | %-15s | %-20s | %-8s |\n", id, nome, numero, endereco, favorito);
+                cont++;
             }
             System.out.println("|----------------------------------------------------------------------|");
+            System.out.printf("| Quantidade de resultados: %-43d|\n",cont);
+            System.out.println("|----------------------------------------------------------------------|");
+
 
             // Fechamento dos recursos
             resultSet.close();
