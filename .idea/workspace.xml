@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="417ecf74-fce7-459c-bdb8-d11657d5f371" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Agenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Agenda.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ServiceContacts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ServiceContacts.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +39,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feat/agenda",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
