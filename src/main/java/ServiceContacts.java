@@ -34,6 +34,7 @@ public class ServiceContacts {
                 String numero = resultSet.getString("numero");
                 String endereco = resultSet.getString("endereco");
                 Boolean favorito = resultSet.getBoolean("favorito");
+                Boolean date = resultSet.getBoolean("favorito");
 
                 System.out.printf("| %-3s | %-10s | %-15s | %-20s | %-8s |\n", id, nome, numero, endereco, favorito);
                 cont++;
